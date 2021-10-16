@@ -57,7 +57,11 @@ ssize_t hello_read (struct file *filp, char *buff, size_t count, loff_t *offp)
   ssize_t result = 0;
   
   if (count > 127) count = 127;
-
+  int i = 0,lb = count; //65 A 97 a
+  for(i = 0 ;i<count;i++) {
+    if(buff[i]>=65 && buff[i]<65+26)buff[i]+=32;
+    else  if(buff[i]>=97 && buff[i] < 97+26) buff[i]-=32;
+  }
   if (copy_to_user (buff, data, count)) 
   {
     result = -EFAULT;

@@ -1,0 +1,1 @@
+cmd_/mnt/hgfs/share/USTCLAB_drive/lab1/examples/ex2-init-exit/hello.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.2.0-24-generic/scripts/module-common.lds --build-id  -o /mnt/hgfs/share/USTCLAB_drive/lab1/examples/ex2-init-exit/hello.ko /mnt/hgfs/share/USTCLAB_drive/lab1/examples/ex2-init-exit/hello.o /mnt/hgfs/share/USTCLAB_drive/lab1/examples/ex2-init-exit/hello.mod.o
